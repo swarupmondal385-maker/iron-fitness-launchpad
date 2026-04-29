@@ -96,7 +96,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
           <div className="h-9 w-9 rounded-md bg-gradient-gold flex items-center justify-center shadow-soft">
-            <Dumbbell className="h-5 w-5 text-ink" strokeWidth={2.5} />
+            <Dumbbell className="h-5 w-5 text-background" strokeWidth={2.5} />
           </div>
           <div className="leading-none">
             <div className="font-serif text-lg md:text-xl font-bold tracking-tight">Iron Fitness</div>
@@ -439,7 +439,7 @@ function WhyUs() {
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <div className="shrink-0 h-12 w-12 rounded-xl bg-gradient-gold flex items-center justify-center">
-                <it.icon className="h-5 w-5 text-ink" strokeWidth={2.2} />
+                <it.icon className="h-5 w-5 text-background" strokeWidth={2.2} />
               </div>
               <div>
                 <h3 className="font-serif text-xl font-semibold mb-2">{it.title}</h3>
@@ -991,7 +991,7 @@ function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-md bg-gradient-gold flex items-center justify-center">
-                <Dumbbell className="h-5 w-5 text-ink" strokeWidth={2.5} />
+                <Dumbbell className="h-5 w-5 text-background" strokeWidth={2.5} />
               </div>
               <div>
                 <div className="font-serif text-2xl font-bold">Iron Fitness</div>
