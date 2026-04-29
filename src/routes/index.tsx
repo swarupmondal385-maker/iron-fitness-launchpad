@@ -1080,11 +1080,10 @@ function FloatingWA() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
-      className="fixed bottom-24 md:bottom-6 right-5 md:right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center shadow-elegant transition-transform hover:scale-110"
-      style={{ backgroundColor: "var(--whatsapp)" }}
+      className="pulse-ring fixed bottom-24 md:bottom-6 right-5 md:right-6 z-50 h-16 w-16 rounded-full flex items-center justify-center shadow-elegant transition-transform hover:scale-110"
+      style={{ backgroundColor: "var(--whatsapp)", boxShadow: "0 0 0 4px oklch(0.13 0.04 320), 0 0 24px oklch(0.72 0.20 145 / 0.7), 0 0 60px oklch(0.72 0.20 145 / 0.4)" }}
     >
-      <MessageCircle className="h-6 w-6 text-white" strokeWidth={2.2} />
-      <span className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ backgroundColor: "var(--whatsapp)" }} />
+      <MessageCircle className="h-7 w-7 text-white" strokeWidth={2.4} />
     </a>
   );
 }
