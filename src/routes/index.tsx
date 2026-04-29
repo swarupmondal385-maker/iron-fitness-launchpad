@@ -270,7 +270,7 @@ function About() {
           <h2 className="font-serif text-4xl md:text-5xl font-bold leading-[1.05] mt-6">
             A serious gym
             <br />
-            for serious <span className="italic text-gold-deep">people.</span>
+            for serious <span className="gum-gradient not-italic">people.</span>
           </h2>
         </div>
         <div className="md:col-span-7 reveal space-y-5 text-lg text-ink-soft leading-relaxed">
@@ -333,7 +333,7 @@ function Services() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             Everything you need.
             <br />
-            <span className="italic text-gold-deep">Nothing you don't.</span>
+            <span className="gum-gradient not-italic">Nothing you don't.</span>
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
@@ -369,7 +369,7 @@ function HowItWorks() {
         <div className="reveal max-w-2xl">
           <SectionLabel num="03" label="How it works" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            Three steps. <span className="italic text-gold-deep">That's it.</span>
+            Three steps. <span className="gum-gradient not-italic">That's it.</span>
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
@@ -428,7 +428,7 @@ function WhyUs() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             We don't compete on price.
             <br />
-            We compete on <span className="italic text-gold-deep">results.</span>
+            We compete on <span className="gum-gradient not-italic">results.</span>
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-2 gap-6">
@@ -469,7 +469,7 @@ function Transformations() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             Transformations
             <br />
-            <span className="italic text-gold-deep">earned in this gym.</span>
+            <span className="gum-gradient not-italic">earned in this gym.</span>
           </h2>
         </div>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -521,7 +521,7 @@ function Reviews() {
             <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
               Loved by locals.
               <br />
-              <span className="italic text-gold-deep">Verified by Google.</span>
+              <span className="gum-gradient not-italic">Verified by Google.</span>
             </h2>
           </div>
           <div className="flex items-center gap-5">
@@ -592,7 +592,7 @@ function Team() {
         <div className="reveal max-w-2xl">
           <SectionLabel num="07" label="Meet the team" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            The people in <span className="italic text-gold-deep">your corner.</span>
+            The people in <span className="gum-gradient not-italic">your corner.</span>
           </h2>
         </div>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -751,7 +751,7 @@ function Gallery() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             A space designed
             <br />
-            <span className="italic text-gold-deep">to make you train.</span>
+            <span className="gum-gradient not-italic">to make you train.</span>
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-4 md:gap-5">
@@ -796,7 +796,7 @@ function FAQ() {
         <div className="reveal text-center max-w-2xl mx-auto">
           <SectionLabel num="09" label="FAQ" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            Questions, <span className="italic text-gold-deep">answered.</span>
+            Questions, <span className="gum-gradient not-italic">answered.</span>
           </h2>
         </div>
         <div className="mt-14 space-y-3">
@@ -860,7 +860,7 @@ function Location() {
         <div className="reveal max-w-2xl">
           <SectionLabel num="10" label="Visit us" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            Find us in <span className="italic text-gold-deep">Bagmore.</span>
+            Find us in <span className="gum-gradient not-italic">Bagmore.</span>
           </h2>
         </div>
         <div className="mt-14 grid lg:grid-cols-5 gap-8">
@@ -954,7 +954,7 @@ function FinalCTA() {
         <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mt-8 leading-[0.95]">
           Stop waiting
           <br />
-          for <span className="italic text-gold-deep">Monday.</span>
+          for <span className="gum-gradient not-italic">Monday.</span>
         </h2>
         <p className="mt-8 max-w-xl mx-auto text-lg md:text-xl text-ink-soft">
           3 months for ₹2499. Doors open 6 AM tomorrow. Send one WhatsApp message and your seat is held.
