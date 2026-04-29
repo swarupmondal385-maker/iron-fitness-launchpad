@@ -142,34 +142,36 @@ function Navbar() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen pt-28 md:pt-32 pb-20 bg-gradient-hero overflow-hidden">
-      <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
-      {/* Floating offer pill */}
+      {/* Floating neon orbs */}
+      <div className="orb orb-pink float-slow h-[420px] w-[420px] -top-20 -left-20" />
+      <div className="orb orb-cyan float-mid h-[360px] w-[360px] top-40 -right-24" />
+      <div className="orb orb-violet float-slow h-[300px] w-[300px] bottom-10 left-1/3 opacity-40" />
+      <div className="absolute inset-0 grid-lines opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grain opacity-70 pointer-events-none" />
+
+      {/* Floating offer sticker */}
       <div className="absolute top-24 md:top-28 right-5 md:right-10 z-10 reveal">
-        <div className="bg-ink text-background rounded-full pl-1.5 pr-4 py-1.5 flex items-center gap-2 shadow-elegant">
-          <span className="bg-gold text-ink text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-            Limited
-          </span>
-          <span className="text-xs font-medium">3 months · ₹2499</span>
+        <div className="sticker bg-gold text-background rounded-xl px-4 py-2.5 flex items-center gap-2">
+          <Flame className="h-4 w-4" />
+          <span className="font-serif text-sm tracking-wider">3 MOS · ₹2499</span>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative">
-        <div className="reveal flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-ink-soft mb-8">
+        <div className="reveal flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-soft mb-8">
           <span className="gold-divider" />
-          <span>Est. Kanchrapara · Bagmore</span>
+          <span className="text-glow-pink">Kanchrapara · Bagmore · Est.</span>
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] neon-cyan" />
         </div>
 
-        <h1 className="reveal font-serif font-bold leading-[0.95] tracking-tight text-[clamp(2.75rem,8vw,7rem)] max-w-5xl">
-          Build the body
-          <br />
-          you've been <span className="italic text-gold-deep">promising</span>
-          <br />
-          yourself.
+        <h1 className="reveal font-serif font-normal leading-[0.9] tracking-tight text-[clamp(3rem,9vw,8.5rem)] max-w-6xl">
+          <span className="block text-foreground text-glow-pink">TRAIN LIKE</span>
+          <span className="block gum-gradient">YOU MEAN IT.</span>
         </h1>
 
-        <p className="reveal mt-8 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
-          Kanchrapara's highest-rated gym. Premium equipment, certified coaches, and a community that
-          actually shows up — all minutes from Bagmore.
+        <p className="reveal mt-10 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
+          Kanchrapara's loudest, brightest, hardest-hitting gym. Heavy iron, neon nights,
+          a community that grinds — minutes from Bagmore. <span className="text-foreground font-semibold">No vibes from this planet.</span>
         </p>
 
         <div className="reveal mt-10 flex flex-wrap items-center gap-4">
@@ -177,39 +179,39 @@ function Hero() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 bg-gradient-gold text-ink px-7 py-4 rounded-full font-semibold shadow-elegant hover:shadow-[0_25px_60px_-15px_rgba(184,149,58,0.45)] transition-all"
+            className="group inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-serif tracking-wider shadow-elegant hover:scale-[1.03] transition-transform glitch-hover"
           >
-            Join Now — ₹2499
+            CLAIM ₹2499 OFFER
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-ink text-ink px-7 py-4 rounded-full font-semibold hover:bg-ink hover:text-background transition-all"
+            className="inline-flex items-center gap-2 border-2 border-foreground/80 text-foreground px-8 py-4 rounded-full font-serif tracking-wider hover:bg-foreground hover:text-background transition-all"
           >
             <MessageCircle className="h-4 w-4" />
-            WhatsApp Us
+            WHATSAPP US
           </a>
         </div>
 
         {/* Trust row */}
-        <div className="reveal mt-16 md:mt-24 flex flex-wrap gap-x-10 gap-y-6 items-end">
+        <div className="reveal mt-16 md:mt-24 flex flex-wrap gap-x-12 gap-y-6 items-end">
           <TrustBlock
             top={
               <div className="flex items-center gap-1">
-                <span className="font-serif text-3xl md:text-4xl font-bold">4.9</span>
+                <span className="font-serif text-4xl md:text-5xl text-glow-pink">4.9</span>
                 <Star className="h-5 w-5 fill-gold text-gold" />
               </div>
             }
             label="Google Rating"
           />
-          <TrustBlock top={<span className="font-serif text-3xl md:text-4xl font-bold">500+</span>} label="Active Members" />
+          <TrustBlock top={<span className="font-serif text-4xl md:text-5xl text-glow-cyan">500+</span>} label="Active Members" />
           <TrustBlock
             top={
               <div className="flex items-center gap-1.5">
-                <Clock className="h-5 w-5 text-gold-deep" />
-                <span className="font-serif text-3xl md:text-4xl font-bold">6–10</span>
+                <Clock className="h-5 w-5 text-gold" />
+                <span className="font-serif text-4xl md:text-5xl">6–10</span>
               </div>
             }
             label="Open every day"
