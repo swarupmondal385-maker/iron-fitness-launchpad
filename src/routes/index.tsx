@@ -484,7 +484,7 @@ function Transformations() {
                   <div className="text-[10px] uppercase tracking-[0.2em]">Before</div>
                   <div className="font-serif text-3xl font-bold mt-1 opacity-60">{m.initials}</div>
                 </div>
-                <div className="bg-gradient-gold flex flex-col items-center justify-center text-ink">
+                <div className="bg-gradient-gold flex flex-col items-center justify-center text-background">
                   <div className="text-[10px] uppercase tracking-[0.2em]">After</div>
                   <div className="font-serif text-3xl font-bold mt-1">{m.initials}</div>
                 </div>
@@ -602,7 +602,7 @@ function Team() {
               className="reveal p-8 rounded-2xl bg-cream border border-border text-center"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="mx-auto h-20 w-20 rounded-full bg-gradient-gold flex items-center justify-center font-serif text-2xl font-bold text-ink shadow-soft">
+              <div className="mx-auto h-20 w-20 rounded-full bg-gradient-gold flex items-center justify-center font-serif text-2xl text-background shadow-soft">
                 {t.name[0]}
               </div>
               <div className="mt-5 font-serif text-xl font-semibold">{t.name}</div>
