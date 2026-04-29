@@ -250,9 +250,9 @@ function Marquee() {
     <section className="border-y border-border bg-cream py-5 overflow-hidden">
       <div className="marquee whitespace-nowrap">
         {row.map((it, i) => (
-          <span key={i} className="flex items-center font-serif text-2xl md:text-3xl text-ink/80 px-8">
+          <span key={i} className="flex items-center font-serif text-2xl md:text-4xl text-foreground/90 px-8 tracking-wider">
             {it}
-            <span className="ml-8 h-1.5 w-1.5 rounded-full bg-gold" />
+            <span className="ml-8 h-2 w-2 rounded-full bg-[var(--accent)] neon-cyan" />
           </span>
         ))}
       </div>
