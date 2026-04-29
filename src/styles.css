@@ -37,47 +37,68 @@
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-whatsapp: var(--whatsapp);
-  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Black Ops One", "Anton", "Bebas Neue", Impact, sans-serif;
   --font-sans: "Inter", "DM Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
-  --radius: 0.75rem;
-  /* Premium light palette */
-  --background: oklch(1 0 0);              /* pure white */
-  --cream: oklch(0.985 0.008 85);          /* warm off-white #FAFAF7 */
-  --foreground: oklch(0.18 0.01 50);       /* near-black #111 */
-  --ink: oklch(0.18 0.01 50);
-  --ink-soft: oklch(0.48 0.01 50);         /* warm gray #6B6B6B */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.01 50);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.01 50);
-  --primary: oklch(0.72 0.115 80);         /* gold #C9A84C */
-  --primary-foreground: oklch(0.18 0.01 50);
-  --gold: oklch(0.72 0.115 80);
-  --gold-deep: oklch(0.65 0.115 75);       /* deeper gold #B8953A */
-  --gold-soft: oklch(0.93 0.045 85);       /* soft champagne */
-  --secondary: oklch(0.97 0.008 85);
-  --secondary-foreground: oklch(0.18 0.01 50);
-  --muted: oklch(0.96 0.008 85);
-  --muted-foreground: oklch(0.48 0.01 50);
-  --accent: oklch(0.93 0.045 85);
-  --accent-foreground: oklch(0.18 0.01 50);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.92 0.012 80);
-  --input: oklch(0.92 0.012 80);
-  --ring: oklch(0.72 0.115 80);
-  --whatsapp: oklch(0.62 0.16 145);
+  --radius: 0.5rem;
 
-  --gradient-cream: linear-gradient(180deg, oklch(1 0 0) 0%, oklch(0.985 0.008 85) 100%);
-  --gradient-gold: linear-gradient(135deg, oklch(0.78 0.12 85) 0%, oklch(0.65 0.115 75) 100%);
-  --gradient-hero: radial-gradient(ellipse at top, oklch(0.96 0.04 85 / 0.6) 0%, transparent 60%),
-                   linear-gradient(180deg, oklch(1 0 0) 0%, oklch(0.985 0.008 85) 100%);
-  --shadow-elegant: 0 20px 60px -20px oklch(0.65 0.115 75 / 0.25);
-  --shadow-soft: 0 4px 24px -8px oklch(0.18 0.01 50 / 0.08);
-  --shadow-card: 0 1px 2px oklch(0.18 0.01 50 / 0.04), 0 8px 24px -12px oklch(0.18 0.01 50 / 0.08);
+  /* === BUBBLEGUM GYM — FROM ANOTHER UNIVERSE === */
+  /* Deep blackcurrant base with electric pink + cyan neon */
+  --background: oklch(0.13 0.04 320);          /* near-black violet-pink #160a1a */
+  --cream: oklch(0.18 0.06 330);               /* darker pink-charcoal panels */
+  --foreground: oklch(0.98 0.01 320);          /* near-white */
+  --ink: oklch(0.98 0.01 320);                 /* "ink" repurposed as light text */
+  --ink-soft: oklch(0.78 0.06 330);            /* soft pink-gray */
+  --card: oklch(0.17 0.05 325);
+  --card-foreground: oklch(0.98 0.01 320);
+  --popover: oklch(0.17 0.05 325);
+  --popover-foreground: oklch(0.98 0.01 320);
+
+  /* Bubblegum hot pink as primary */
+  --primary: oklch(0.72 0.28 350);             /* electric bubblegum #ff3eb5 */
+  --primary-foreground: oklch(0.13 0.04 320);
+  --gold: oklch(0.78 0.27 345);                /* hot pink "gold" */
+  --gold-deep: oklch(0.66 0.29 355);           /* deeper magenta */
+  --gold-soft: oklch(0.30 0.14 335);           /* dim pink panel */
+
+  --secondary: oklch(0.20 0.07 325);
+  --secondary-foreground: oklch(0.98 0.01 320);
+  --muted: oklch(0.22 0.06 325);
+  --muted-foreground: oklch(0.78 0.06 330);
+  --accent: oklch(0.85 0.22 200);              /* electric cyan */
+  --accent-foreground: oklch(0.13 0.04 320);
+  --destructive: oklch(0.65 0.27 25);
+  --destructive-foreground: oklch(0.98 0.01 320);
+  --border: oklch(0.28 0.10 330);
+  --input: oklch(0.28 0.10 330);
+  --ring: oklch(0.78 0.27 345);
+  --whatsapp: oklch(0.72 0.20 145);
+
+  /* Lime kicker for energy moments */
+  --lime: oklch(0.92 0.24 130);
+  --color-lime: var(--lime);
+
+  --gradient-cream: linear-gradient(180deg, oklch(0.13 0.04 320) 0%, oklch(0.18 0.07 330) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.25 350) 0%, oklch(0.62 0.30 355) 50%, oklch(0.55 0.28 295) 100%);
+  --gradient-hero:
+    radial-gradient(ellipse at 20% 10%, oklch(0.72 0.28 350 / 0.55) 0%, transparent 55%),
+    radial-gradient(ellipse at 85% 30%, oklch(0.75 0.25 290 / 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 90%, oklch(0.80 0.22 200 / 0.30) 0%, transparent 60%),
+    linear-gradient(180deg, oklch(0.10 0.04 320) 0%, oklch(0.15 0.06 330) 100%);
+
+  --shadow-elegant:
+    0 0 0 1px oklch(0.78 0.27 345 / 0.35),
+    0 20px 80px -20px oklch(0.72 0.28 350 / 0.55),
+    0 0 60px oklch(0.75 0.25 290 / 0.30);
+  --shadow-soft: 0 4px 24px -8px oklch(0 0 0 / 0.5);
+  --shadow-card:
+    0 1px 0 oklch(1 0 0 / 0.04) inset,
+    0 12px 32px -16px oklch(0 0 0 / 0.7);
+
+  --neon-pink: 0 0 20px oklch(0.78 0.27 345 / 0.7), 0 0 40px oklch(0.78 0.27 345 / 0.4);
+  --neon-cyan: 0 0 20px oklch(0.85 0.22 200 / 0.7), 0 0 40px oklch(0.85 0.22 200 / 0.4);
 }
 
 @layer base {
@@ -86,6 +107,7 @@
   }
   html {
     scroll-behavior: smooth;
+    background: var(--background);
   }
   body {
     background-color: var(--color-background);
@@ -96,7 +118,12 @@
   }
   h1, h2, h3, h4, .font-serif {
     font-family: var(--font-serif);
-    letter-spacing: -0.01em;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--background);
   }
 }
 
@@ -108,17 +135,23 @@
   .text-gold-deep { color: var(--gold-deep); }
   .text-ink { color: var(--ink); }
   .text-ink-soft { color: var(--ink-soft); }
+  .text-lime { color: var(--lime); }
+  .text-cyan-neon { color: var(--accent); }
   .border-gold { border-color: var(--gold); }
   .bg-gradient-hero { background: var(--gradient-hero); }
   .bg-gradient-gold { background: var(--gradient-gold); }
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-soft { box-shadow: var(--shadow-soft); }
   .shadow-card { box-shadow: var(--shadow-card); }
+  .neon-pink { box-shadow: var(--neon-pink); }
+  .neon-cyan { box-shadow: var(--neon-cyan); }
+  .text-glow-pink { text-shadow: 0 0 24px oklch(0.78 0.27 345 / 0.65), 0 0 60px oklch(0.78 0.27 345 / 0.35); }
+  .text-glow-cyan { text-shadow: 0 0 24px oklch(0.85 0.22 200 / 0.7); }
 
   .reveal {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .reveal.is-visible {
     opacity: 1;
@@ -127,7 +160,7 @@
 
   .marquee {
     display: flex;
-    animation: marquee 38s linear infinite;
+    animation: marquee 32s linear infinite;
     width: max-content;
   }
   @keyframes marquee {
@@ -135,14 +168,93 @@
     to { transform: translateX(-50%); }
   }
 
+  /* Grain → grungy noise + scanlines */
   .grain {
-    background-image: radial-gradient(oklch(0.18 0.01 50 / 0.03) 1px, transparent 1px);
-    background-size: 3px 3px;
+    background-image:
+      radial-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+      repeating-linear-gradient(0deg, oklch(1 0 0 / 0.015) 0 1px, transparent 1px 3px);
+    background-size: 3px 3px, 100% 3px;
   }
 
   .gold-divider {
-    width: 48px;
-    height: 1px;
-    background: var(--gold);
+    width: 56px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  /* Animated gradient sheen for headlines */
+  .gum-gradient {
+    background: linear-gradient(100deg, #ff3eb5 0%, #ff7ad9 30%, #b266ff 60%, #29e7ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 200% 100%;
+    animation: gum-shift 6s ease-in-out infinite;
+  }
+  @keyframes gum-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Pulsing neon ring */
+  .pulse-ring {
+    position: relative;
+  }
+  .pulse-ring::after {
+    content: "";
+    position: absolute; inset: -6px;
+    border-radius: inherit;
+    border: 2px solid var(--gold);
+    opacity: 0;
+    animation: pulse-ring 2s ease-out infinite;
+    pointer-events: none;
+  }
+  @keyframes pulse-ring {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    100% { transform: scale(1.25); opacity: 0; }
+  }
+
+  /* Floating orbs for hero */
+  .orb {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(60px);
+    opacity: 0.55;
+    pointer-events: none;
+  }
+  .orb-pink { background: oklch(0.72 0.28 350); }
+  .orb-cyan { background: oklch(0.78 0.22 200); }
+  .orb-violet { background: oklch(0.55 0.28 295); }
+
+  @keyframes float-y {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+  }
+  .float-slow { animation: float-y 9s ease-in-out infinite; }
+  .float-mid  { animation: float-y 6s ease-in-out infinite; }
+
+  /* Sticker chip */
+  .sticker {
+    transform: rotate(-3deg);
+    box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--gold), 0 12px 28px -10px oklch(0.78 0.27 345 / 0.6);
+  }
+
+  /* Brutal grid lines bg */
+  .grid-lines {
+    background-image:
+      linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .glitch-hover:hover {
+    animation: glitch 0.4s steps(2, end);
+  }
+  @keyframes glitch {
+    0% { transform: translate(0); }
+    25% { transform: translate(-2px, 1px); }
+    50% { transform: translate(2px, -1px); }
+    75% { transform: translate(-1px, -2px); }
+    100% { transform: translate(0); }
   }
 }
