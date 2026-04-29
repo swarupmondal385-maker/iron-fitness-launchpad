@@ -121,7 +121,7 @@ function Navbar() {
           href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 bg-ink text-background px-4 py-2.5 rounded-full text-sm font-medium hover:bg-gold hover:text-ink transition-all"
+          className="hidden md:inline-flex items-center gap-2 bg-ink text-background px-4 py-2.5 rounded-full text-sm font-medium hover:bg-gold hover:text-background transition-all"
         >
           <MessageCircle className="h-4 w-4" />
           WhatsApp
@@ -538,7 +538,7 @@ function Reviews() {
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-ink text-background px-5 py-3 rounded-full text-sm font-medium hover:bg-gold hover:text-ink transition-colors"
+              className="inline-flex items-center gap-2 bg-ink text-background px-5 py-3 rounded-full text-sm font-medium hover:bg-gold hover:text-background transition-colors"
             >
               See on Google
               <ArrowRight className="h-4 w-4" />
@@ -649,7 +649,7 @@ function OfferBanner() {
         <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gradient-gold opacity-20 blur-3xl" />
         <div className="relative grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7">
-            <div className="inline-flex items-center gap-2 bg-gold text-ink px-3 py-1.5 rounded-full text-[11px] uppercase tracking-[0.2em] font-bold">
+            <div className="inline-flex items-center gap-2 bg-gold text-background px-3 py-1.5 rounded-full text-[11px] uppercase tracking-[0.2em] font-bold">
               <Flame className="h-3.5 w-3.5" />
               Limited Offer · This Month Only
             </div>
@@ -667,7 +667,7 @@ function OfferBanner() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-gold text-ink px-7 py-4 rounded-full font-semibold shadow-elegant"
+                className="inline-flex items-center gap-2 bg-gradient-gold text-background px-7 py-4 rounded-full font-semibold shadow-elegant"
               >
                 <MessageCircle className="h-4 w-4" />
                 Claim ₹2499 Offer
@@ -831,7 +831,7 @@ function FAQ() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-ink text-background px-7 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-ink transition-colors"
+            className="inline-flex items-center gap-2 bg-ink text-background px-7 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-background transition-colors"
           >
             <MessageCircle className="h-4 w-4" />
             Ask on WhatsApp
@@ -898,7 +898,7 @@ function Location() {
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-ink text-background px-6 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-ink transition-colors"
+              className="inline-flex items-center gap-2 bg-ink text-background px-6 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-background transition-colors"
             >
               <Navigation className="h-4 w-4" />
               Get Directions
@@ -964,7 +964,7 @@ function FinalCTA() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-gold text-ink px-8 py-4 rounded-full font-semibold shadow-elegant text-lg"
+            className="inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-semibold shadow-elegant text-lg"
           >
             <MessageCircle className="h-5 w-5" />
             Message us now
@@ -1009,7 +1009,7 @@ function Footer() {
                 href={FB_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-ink hover:border-gold transition-colors"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-background hover:border-gold transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4" />
@@ -1018,7 +1018,7 @@ function Footer() {
                 href={`https://www.instagram.com/explore/search/keyword/?q=iron%20fitness%20kanchrapara`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-ink hover:border-gold transition-colors"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-background hover:border-gold transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -1027,7 +1027,7 @@ function Footer() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-ink hover:border-gold transition-colors"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-background hover:border-gold transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="h-4 w-4" />
