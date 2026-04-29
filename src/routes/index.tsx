@@ -89,14 +89,14 @@ function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-soft"
+          ? "bg-background/70 backdrop-blur-xl border-b border-border shadow-soft"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
           <div className="h-9 w-9 rounded-md bg-gradient-gold flex items-center justify-center shadow-soft">
-            <Dumbbell className="h-5 w-5 text-ink" strokeWidth={2.5} />
+            <Dumbbell className="h-5 w-5 text-background" strokeWidth={2.5} />
           </div>
           <div className="leading-none">
             <div className="font-serif text-lg md:text-xl font-bold tracking-tight">Iron Fitness</div>
@@ -121,7 +121,7 @@ function Navbar() {
           href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center gap-2 bg-ink text-background px-4 py-2.5 rounded-full text-sm font-medium hover:bg-gold hover:text-ink transition-all"
+          className="hidden md:inline-flex items-center gap-2 bg-ink text-background px-4 py-2.5 rounded-full text-sm font-medium hover:bg-gold hover:text-background transition-all"
         >
           <MessageCircle className="h-4 w-4" />
           WhatsApp
@@ -142,34 +142,36 @@ function Navbar() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen pt-28 md:pt-32 pb-20 bg-gradient-hero overflow-hidden">
-      <div className="absolute inset-0 grain opacity-60 pointer-events-none" />
-      {/* Floating offer pill */}
+      {/* Floating neon orbs */}
+      <div className="orb orb-pink float-slow h-[420px] w-[420px] -top-20 -left-20" />
+      <div className="orb orb-cyan float-mid h-[360px] w-[360px] top-40 -right-24" />
+      <div className="orb orb-violet float-slow h-[300px] w-[300px] bottom-10 left-1/3 opacity-40" />
+      <div className="absolute inset-0 grid-lines opacity-40 pointer-events-none" />
+      <div className="absolute inset-0 grain opacity-70 pointer-events-none" />
+
+      {/* Floating offer sticker */}
       <div className="absolute top-24 md:top-28 right-5 md:right-10 z-10 reveal">
-        <div className="bg-ink text-background rounded-full pl-1.5 pr-4 py-1.5 flex items-center gap-2 shadow-elegant">
-          <span className="bg-gold text-ink text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full">
-            Limited
-          </span>
-          <span className="text-xs font-medium">3 months · ₹2499</span>
+        <div className="sticker bg-gold text-background rounded-xl px-4 py-2.5 flex items-center gap-2">
+          <Flame className="h-4 w-4" />
+          <span className="font-serif text-sm tracking-wider">3 MOS · ₹2499</span>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 relative">
-        <div className="reveal flex items-center gap-2 text-xs uppercase tracking-[0.22em] text-ink-soft mb-8">
+        <div className="reveal flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-soft mb-8">
           <span className="gold-divider" />
-          <span>Est. Kanchrapara · Bagmore</span>
+          <span className="text-glow-pink">Kanchrapara · Bagmore · Est.</span>
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] neon-cyan" />
         </div>
 
-        <h1 className="reveal font-serif font-bold leading-[0.95] tracking-tight text-[clamp(2.75rem,8vw,7rem)] max-w-5xl">
-          Build the body
-          <br />
-          you've been <span className="italic text-gold-deep">promising</span>
-          <br />
-          yourself.
+        <h1 className="reveal font-serif font-normal leading-[0.9] tracking-tight text-[clamp(3rem,9vw,8.5rem)] max-w-6xl">
+          <span className="block text-foreground text-glow-pink">TRAIN LIKE</span>
+          <span className="block gum-gradient">YOU MEAN IT.</span>
         </h1>
 
-        <p className="reveal mt-8 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
-          Kanchrapara's highest-rated gym. Premium equipment, certified coaches, and a community that
-          actually shows up — all minutes from Bagmore.
+        <p className="reveal mt-10 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
+          Kanchrapara's loudest, brightest, hardest-hitting gym. Heavy iron, neon nights,
+          a community that grinds — minutes from Bagmore. <span className="text-foreground font-semibold">No vibes from this planet.</span>
         </p>
 
         <div className="reveal mt-10 flex flex-wrap items-center gap-4">
@@ -177,39 +179,39 @@ function Hero() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 bg-gradient-gold text-ink px-7 py-4 rounded-full font-semibold shadow-elegant hover:shadow-[0_25px_60px_-15px_rgba(184,149,58,0.45)] transition-all"
+            className="group inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-serif tracking-wider shadow-elegant hover:scale-[1.03] transition-transform glitch-hover"
           >
-            Join Now — ₹2499
+            CLAIM ₹2499 OFFER
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border border-ink text-ink px-7 py-4 rounded-full font-semibold hover:bg-ink hover:text-background transition-all"
+            className="inline-flex items-center gap-2 border-2 border-foreground/80 text-foreground px-8 py-4 rounded-full font-serif tracking-wider hover:bg-foreground hover:text-background transition-all"
           >
             <MessageCircle className="h-4 w-4" />
-            WhatsApp Us
+            WHATSAPP US
           </a>
         </div>
 
         {/* Trust row */}
-        <div className="reveal mt-16 md:mt-24 flex flex-wrap gap-x-10 gap-y-6 items-end">
+        <div className="reveal mt-16 md:mt-24 flex flex-wrap gap-x-12 gap-y-6 items-end">
           <TrustBlock
             top={
               <div className="flex items-center gap-1">
-                <span className="font-serif text-3xl md:text-4xl font-bold">4.9</span>
+                <span className="font-serif text-4xl md:text-5xl text-glow-pink">4.9</span>
                 <Star className="h-5 w-5 fill-gold text-gold" />
               </div>
             }
             label="Google Rating"
           />
-          <TrustBlock top={<span className="font-serif text-3xl md:text-4xl font-bold">500+</span>} label="Active Members" />
+          <TrustBlock top={<span className="font-serif text-4xl md:text-5xl text-glow-cyan">500+</span>} label="Active Members" />
           <TrustBlock
             top={
               <div className="flex items-center gap-1.5">
-                <Clock className="h-5 w-5 text-gold-deep" />
-                <span className="font-serif text-3xl md:text-4xl font-bold">6–10</span>
+                <Clock className="h-5 w-5 text-gold" />
+                <span className="font-serif text-4xl md:text-5xl">6–10</span>
               </div>
             }
             label="Open every day"
@@ -248,9 +250,9 @@ function Marquee() {
     <section className="border-y border-border bg-cream py-5 overflow-hidden">
       <div className="marquee whitespace-nowrap">
         {row.map((it, i) => (
-          <span key={i} className="flex items-center font-serif text-2xl md:text-3xl text-ink/80 px-8">
+          <span key={i} className="flex items-center font-serif text-2xl md:text-4xl text-foreground/90 px-8 tracking-wider">
             {it}
-            <span className="ml-8 h-1.5 w-1.5 rounded-full bg-gold" />
+            <span className="ml-8 h-2 w-2 rounded-full bg-[var(--accent)] neon-cyan" />
           </span>
         ))}
       </div>
@@ -268,7 +270,7 @@ function About() {
           <h2 className="font-serif text-4xl md:text-5xl font-bold leading-[1.05] mt-6">
             A serious gym
             <br />
-            for serious <span className="italic text-gold-deep">people.</span>
+            for serious <span className="gum-gradient not-italic">people.</span>
           </h2>
         </div>
         <div className="md:col-span-7 reveal space-y-5 text-lg text-ink-soft leading-relaxed">
@@ -331,7 +333,7 @@ function Services() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             Everything you need.
             <br />
-            <span className="italic text-gold-deep">Nothing you don't.</span>
+            <span className="gum-gradient not-italic">Nothing you don't.</span>
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
@@ -367,7 +369,7 @@ function HowItWorks() {
         <div className="reveal max-w-2xl">
           <SectionLabel num="03" label="How it works" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            Three steps. <span className="italic text-gold-deep">That's it.</span>
+            Three steps. <span className="gum-gradient not-italic">That's it.</span>
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-3 gap-6 md:gap-8">
@@ -426,7 +428,7 @@ function WhyUs() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             We don't compete on price.
             <br />
-            We compete on <span className="italic text-gold-deep">results.</span>
+            We compete on <span className="gum-gradient not-italic">results.</span>
           </h2>
         </div>
         <div className="mt-16 grid md:grid-cols-2 gap-6">
@@ -437,7 +439,7 @@ function WhyUs() {
               style={{ transitionDelay: `${i * 60}ms` }}
             >
               <div className="shrink-0 h-12 w-12 rounded-xl bg-gradient-gold flex items-center justify-center">
-                <it.icon className="h-5 w-5 text-ink" strokeWidth={2.2} />
+                <it.icon className="h-5 w-5 text-background" strokeWidth={2.2} />
               </div>
               <div>
                 <h3 className="font-serif text-xl font-semibold mb-2">{it.title}</h3>
@@ -467,7 +469,7 @@ function Transformations() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             Transformations
             <br />
-            <span className="italic text-gold-deep">earned in this gym.</span>
+            <span className="gum-gradient not-italic">earned in this gym.</span>
           </h2>
         </div>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -482,7 +484,7 @@ function Transformations() {
                   <div className="text-[10px] uppercase tracking-[0.2em]">Before</div>
                   <div className="font-serif text-3xl font-bold mt-1 opacity-60">{m.initials}</div>
                 </div>
-                <div className="bg-gradient-gold flex flex-col items-center justify-center text-ink">
+                <div className="bg-gradient-gold flex flex-col items-center justify-center text-background">
                   <div className="text-[10px] uppercase tracking-[0.2em]">After</div>
                   <div className="font-serif text-3xl font-bold mt-1">{m.initials}</div>
                 </div>
@@ -519,7 +521,7 @@ function Reviews() {
             <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
               Loved by locals.
               <br />
-              <span className="italic text-gold-deep">Verified by Google.</span>
+              <span className="gum-gradient not-italic">Verified by Google.</span>
             </h2>
           </div>
           <div className="flex items-center gap-5">
@@ -536,7 +538,7 @@ function Reviews() {
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-ink text-background px-5 py-3 rounded-full text-sm font-medium hover:bg-gold hover:text-ink transition-colors"
+              className="inline-flex items-center gap-2 bg-ink text-background px-5 py-3 rounded-full text-sm font-medium hover:bg-gold hover:text-background transition-colors"
             >
               See on Google
               <ArrowRight className="h-4 w-4" />
@@ -590,7 +592,7 @@ function Team() {
         <div className="reveal max-w-2xl">
           <SectionLabel num="07" label="Meet the team" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            The people in <span className="italic text-gold-deep">your corner.</span>
+            The people in <span className="gum-gradient not-italic">your corner.</span>
           </h2>
         </div>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -600,7 +602,7 @@ function Team() {
               className="reveal p-8 rounded-2xl bg-cream border border-border text-center"
               style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="mx-auto h-20 w-20 rounded-full bg-gradient-gold flex items-center justify-center font-serif text-2xl font-bold text-ink shadow-soft">
+              <div className="mx-auto h-20 w-20 rounded-full bg-gradient-gold flex items-center justify-center font-serif text-2xl text-background shadow-soft">
                 {t.name[0]}
               </div>
               <div className="mt-5 font-serif text-xl font-semibold">{t.name}</div>
@@ -647,7 +649,7 @@ function OfferBanner() {
         <div className="absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gradient-gold opacity-20 blur-3xl" />
         <div className="relative grid md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-7">
-            <div className="inline-flex items-center gap-2 bg-gold text-ink px-3 py-1.5 rounded-full text-[11px] uppercase tracking-[0.2em] font-bold">
+            <div className="inline-flex items-center gap-2 bg-gold text-background px-3 py-1.5 rounded-full text-[11px] uppercase tracking-[0.2em] font-bold">
               <Flame className="h-3.5 w-3.5" />
               Limited Offer · This Month Only
             </div>
@@ -665,7 +667,7 @@ function OfferBanner() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-gold text-ink px-7 py-4 rounded-full font-semibold shadow-elegant"
+                className="inline-flex items-center gap-2 bg-gradient-gold text-background px-7 py-4 rounded-full font-semibold shadow-elegant"
               >
                 <MessageCircle className="h-4 w-4" />
                 Claim ₹2499 Offer
@@ -749,7 +751,7 @@ function Gallery() {
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
             A space designed
             <br />
-            <span className="italic text-gold-deep">to make you train.</span>
+            <span className="gum-gradient not-italic">to make you train.</span>
           </h2>
         </div>
         <div className="mt-14 grid md:grid-cols-3 gap-4 md:gap-5">
@@ -794,7 +796,7 @@ function FAQ() {
         <div className="reveal text-center max-w-2xl mx-auto">
           <SectionLabel num="09" label="FAQ" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            Questions, <span className="italic text-gold-deep">answered.</span>
+            Questions, <span className="gum-gradient not-italic">answered.</span>
           </h2>
         </div>
         <div className="mt-14 space-y-3">
@@ -829,7 +831,7 @@ function FAQ() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-ink text-background px-7 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-ink transition-colors"
+            className="inline-flex items-center gap-2 bg-ink text-background px-7 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-background transition-colors"
           >
             <MessageCircle className="h-4 w-4" />
             Ask on WhatsApp
@@ -858,7 +860,7 @@ function Location() {
         <div className="reveal max-w-2xl">
           <SectionLabel num="10" label="Visit us" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            Find us in <span className="italic text-gold-deep">Bagmore.</span>
+            Find us in <span className="gum-gradient not-italic">Bagmore.</span>
           </h2>
         </div>
         <div className="mt-14 grid lg:grid-cols-5 gap-8">
@@ -896,7 +898,7 @@ function Location() {
               href={MAPS_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-ink text-background px-6 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-ink transition-colors"
+              className="inline-flex items-center gap-2 bg-ink text-background px-6 py-3.5 rounded-full font-semibold hover:bg-gold hover:text-background transition-colors"
             >
               <Navigation className="h-4 w-4" />
               Get Directions
@@ -952,7 +954,7 @@ function FinalCTA() {
         <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mt-8 leading-[0.95]">
           Stop waiting
           <br />
-          for <span className="italic text-gold-deep">Monday.</span>
+          for <span className="gum-gradient not-italic">Monday.</span>
         </h2>
         <p className="mt-8 max-w-xl mx-auto text-lg md:text-xl text-ink-soft">
           3 months for ₹2499. Doors open 6 AM tomorrow. Send one WhatsApp message and your seat is held.
@@ -962,7 +964,7 @@ function FinalCTA() {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-gold text-ink px-8 py-4 rounded-full font-semibold shadow-elegant text-lg"
+            className="inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-semibold shadow-elegant text-lg"
           >
             <MessageCircle className="h-5 w-5" />
             Message us now
@@ -989,7 +991,7 @@ function Footer() {
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 rounded-md bg-gradient-gold flex items-center justify-center">
-                <Dumbbell className="h-5 w-5 text-ink" strokeWidth={2.5} />
+                <Dumbbell className="h-5 w-5 text-background" strokeWidth={2.5} />
               </div>
               <div>
                 <div className="font-serif text-2xl font-bold">Iron Fitness</div>
@@ -1007,7 +1009,7 @@ function Footer() {
                 href={FB_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-ink hover:border-gold transition-colors"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-background hover:border-gold transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-4 w-4" />
@@ -1016,7 +1018,7 @@ function Footer() {
                 href={`https://www.instagram.com/explore/search/keyword/?q=iron%20fitness%20kanchrapara`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-ink hover:border-gold transition-colors"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-background hover:border-gold transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram className="h-4 w-4" />
@@ -1025,7 +1027,7 @@ function Footer() {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-ink hover:border-gold transition-colors"
+                className="h-10 w-10 rounded-full border border-background/20 flex items-center justify-center hover:bg-gold hover:text-background hover:border-gold transition-colors"
                 aria-label="WhatsApp"
               >
                 <MessageCircle className="h-4 w-4" />
@@ -1078,11 +1080,10 @@ function FloatingWA() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="WhatsApp"
-      className="fixed bottom-24 md:bottom-6 right-5 md:right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center shadow-elegant transition-transform hover:scale-110"
-      style={{ backgroundColor: "var(--whatsapp)" }}
+      className="pulse-ring fixed bottom-24 md:bottom-6 right-5 md:right-6 z-50 h-16 w-16 rounded-full flex items-center justify-center shadow-elegant transition-transform hover:scale-110"
+      style={{ backgroundColor: "var(--whatsapp)", boxShadow: "0 0 0 4px oklch(0.13 0.04 320), 0 0 24px oklch(0.72 0.20 145 / 0.7), 0 0 60px oklch(0.72 0.20 145 / 0.4)" }}
     >
-      <MessageCircle className="h-6 w-6 text-white" strokeWidth={2.2} />
-      <span className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ backgroundColor: "var(--whatsapp)" }} />
+      <MessageCircle className="h-7 w-7 text-white" strokeWidth={2.4} />
     </a>
   );
 }
