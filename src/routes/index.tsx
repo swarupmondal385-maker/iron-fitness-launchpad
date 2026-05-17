@@ -741,39 +741,50 @@ function Countdown() {
 /* ---------------- GALLERY ---------------- */
 function Gallery() {
   const tiles = [
-    { label: "Gym Floor", h: "h-72 md:h-96", grad: "from-gold-soft to-muted" },
-    { label: "Cardio Zone", h: "h-72 md:h-72", grad: "from-muted to-gold-soft" },
-    { label: "Free Weights", h: "h-72 md:h-72", grad: "from-cream to-gold-soft" },
-    { label: "Personal Training Area", h: "h-72 md:h-96", grad: "from-gold-soft to-cream" },
-    { label: "Strength Machines", h: "h-72 md:h-72", grad: "from-muted to-cream" },
-    { label: "Reception & Lounge", h: "h-72 md:h-72", grad: "from-cream to-muted" },
+    { label: "Heavy Day", sub: "Deadlift Platform", img: gymHero, h: "md:row-span-2 aspect-[4/5] md:aspect-auto" },
+    { label: "Cardio Zone", sub: "Neon-lit Treadmills", img: gymCardio, h: "aspect-[4/3]" },
+    { label: "Free Weights", sub: "Chrome Dumbbell Wall", img: gymDumbbells, h: "aspect-[4/3]" },
+    { label: "Personal Training", sub: "1-on-1 Coaching", img: gymPT, h: "md:col-span-2 aspect-[16/9]" },
+    { label: "Boxing & MMA", sub: "Bag Work", img: gymBoxing, h: "aspect-[4/5]" },
+    { label: "Power Rack", sub: "Squat & Bench", img: gymSquat, h: "aspect-[4/5]" },
+    { label: "Pull-Up Bars", sub: "Calisthenics Zone", img: gymPullup, h: "aspect-[4/5]" },
   ];
   return (
-    <section className="py-24 md:py-32 px-5 md:px-8 bg-cream">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-24 md:py-32 px-5 md:px-8 bg-background overflow-hidden">
+      <div className="orb orb-pink float-slow h-[400px] w-[400px] -top-20 right-0 opacity-30" />
+      <div className="absolute inset-0 grid-lines opacity-30 pointer-events-none" />
+      <div className="max-w-7xl mx-auto relative">
         <div className="reveal max-w-2xl">
           <SectionLabel num="08" label="Inside the gym" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            A space designed
+            Heavy iron.
             <br />
-            <span className="gum-gradient not-italic">to make you train.</span>
+            <span className="gum-gradient not-italic">Neon nights.</span>
           </h2>
+          <p className="mt-6 text-ink-soft text-lg max-w-xl">
+            Step inside a gym engineered to make you train harder. Every corner glows, every plate is loaded, every rep matters.
+          </p>
         </div>
-        <div className="mt-14 grid md:grid-cols-3 gap-4 md:gap-5">
+        <div className="mt-14 grid md:grid-cols-3 gap-4 md:gap-5 md:auto-rows-[260px]">
           {tiles.map((t, i) => (
             <div
               key={t.label}
-              className={`reveal relative ${t.h} rounded-2xl overflow-hidden bg-gradient-to-br ${t.grad} border border-border group`}
-              style={{ transitionDelay: `${i * 50}ms` }}
+              className={`reveal relative ${t.h} rounded-2xl overflow-hidden border border-gold/30 group shadow-card`}
+              style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="absolute inset-0 grain opacity-50" />
-              <div className="absolute inset-0 flex items-end p-6">
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-ink-soft">Iron Fitness</div>
-                  <div className="font-serif text-2xl font-semibold text-ink mt-1">{t.label}</div>
-                </div>
+              <img
+                src={t.img}
+                alt={`${t.label} — ${t.sub} at Iron Fitness Kanchrapara`}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="absolute inset-0 mix-blend-overlay opacity-0 group-hover:opacity-60 transition-opacity duration-500" style={{ background: "radial-gradient(circle at 50% 50%, oklch(0.78 0.27 345 / 0.5), transparent 70%)" }} />
+              <div className="absolute top-5 right-5 h-2 w-2 rounded-full bg-gold neon-pink animate-pulse" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-gold">{t.sub}</div>
+                <div className="font-serif text-2xl md:text-3xl text-foreground mt-1 text-glow-pink">{t.label}</div>
               </div>
-              <Dumbbell className="absolute top-6 right-6 h-7 w-7 text-ink/20 group-hover:text-gold-deep transition-colors" />
             </div>
           ))}
         </div>
