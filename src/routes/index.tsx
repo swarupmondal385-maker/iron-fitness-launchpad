@@ -24,6 +24,14 @@ import {
   Zap,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
+import gymHero from "@/assets/gym-hero.jpg";
+import gymPlates from "@/assets/gym-plates.jpg";
+import gymPullup from "@/assets/gym-pullup.jpg";
+import gymCardio from "@/assets/gym-cardio.jpg";
+import gymDumbbells from "@/assets/gym-dumbbells.jpg";
+import gymBoxing from "@/assets/gym-boxing.jpg";
+import gymPT from "@/assets/gym-pt.jpg";
+import gymSquat from "@/assets/gym-squat.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
