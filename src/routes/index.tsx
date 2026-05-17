@@ -964,8 +964,17 @@ function InfoRow({
 /* ---------------- FINAL CTA ---------------- */
 function FinalCTA() {
   return (
-    <section className="py-28 md:py-40 px-5 md:px-8 bg-background">
-      <div className="max-w-5xl mx-auto text-center reveal">
+    <section className="relative py-28 md:py-40 px-5 md:px-8 bg-background overflow-hidden">
+      <img
+        src={gymBoxing}
+        alt="Boxer hitting heavy bag at Iron Fitness"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover opacity-30"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+      <div className="absolute inset-0 grid-lines opacity-40" />
+      <div className="orb orb-pink float-slow h-[500px] w-[500px] -top-32 -right-32 opacity-50" />
+      <div className="max-w-5xl mx-auto text-center reveal relative">
         <SectionLabel num="11" label="The first step" />
         <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mt-8 leading-[0.95]">
           Stop waiting
@@ -976,19 +985,11 @@ function FinalCTA() {
           3 months for ₹2499. Doors open 6 AM tomorrow. Send one WhatsApp message and your seat is held.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-semibold shadow-elegant text-lg"
-          >
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-semibold shadow-elegant text-lg glitch-hover">
             <MessageCircle className="h-5 w-5" />
             Message us now
           </a>
-          <a
-            href={`tel:+91${PHONE}`}
-            className="inline-flex items-center gap-2 border border-ink text-ink px-8 py-4 rounded-full font-semibold hover:bg-ink hover:text-background transition-colors text-lg"
-          >
+          <a href={`tel:+91${PHONE}`} className="inline-flex items-center gap-2 border border-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:bg-foreground hover:text-background transition-colors text-lg">
             <Phone className="h-5 w-5" />
             +91 {PHONE}
           </a>
