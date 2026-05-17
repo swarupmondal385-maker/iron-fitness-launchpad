@@ -24,6 +24,14 @@ import {
   Zap,
 } from "lucide-react";
 import { useReveal } from "@/hooks/use-reveal";
+import gymHero from "@/assets/gym-hero.jpg";
+import gymPlates from "@/assets/gym-plates.jpg";
+import gymPullup from "@/assets/gym-pullup.jpg";
+import gymCardio from "@/assets/gym-cardio.jpg";
+import gymDumbbells from "@/assets/gym-dumbbells.jpg";
+import gymBoxing from "@/assets/gym-boxing.jpg";
+import gymPT from "@/assets/gym-pt.jpg";
+import gymSquat from "@/assets/gym-squat.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -142,80 +150,77 @@ function Navbar() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen pt-28 md:pt-32 pb-20 bg-gradient-hero overflow-hidden">
-      {/* Floating neon orbs */}
       <div className="orb orb-pink float-slow h-[420px] w-[420px] -top-20 -left-20" />
       <div className="orb orb-cyan float-mid h-[360px] w-[360px] top-40 -right-24" />
       <div className="orb orb-violet float-slow h-[300px] w-[300px] bottom-10 left-1/3 opacity-40" />
       <div className="absolute inset-0 grid-lines opacity-40 pointer-events-none" />
       <div className="absolute inset-0 grain opacity-70 pointer-events-none" />
 
-      {/* Floating offer sticker */}
-      <div className="absolute top-24 md:top-28 right-5 md:right-10 z-10 reveal">
+      <div className="absolute top-24 md:top-28 right-5 md:right-10 z-20 reveal">
         <div className="sticker bg-gold text-background rounded-xl px-4 py-2.5 flex items-center gap-2">
           <Flame className="h-4 w-4" />
           <span className="font-serif text-sm tracking-wider">3 MOS · ₹2499</span>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 md:px-8 relative">
-        <div className="reveal flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-soft mb-8">
-          <span className="gold-divider" />
-          <span className="text-glow-pink">Kanchrapara · Bagmore · Est.</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] neon-cyan" />
+      <div className="max-w-7xl mx-auto px-5 md:px-8 relative grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="lg:col-span-7">
+          <div className="reveal flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-soft mb-8">
+            <span className="gold-divider" />
+            <span className="text-glow-pink">Kanchrapara · Bagmore · Est.</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] neon-cyan" />
+          </div>
+
+          <h1 className="reveal font-serif font-normal leading-[0.9] tracking-tight text-[clamp(3rem,8vw,7.5rem)]">
+            <span className="block text-foreground text-glow-pink">TRAIN LIKE</span>
+            <span className="block gum-gradient">YOU MEAN IT.</span>
+          </h1>
+
+          <p className="reveal mt-10 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
+            Kanchrapara's loudest, brightest, hardest-hitting gym. Heavy iron, neon nights,
+            a community that grinds — minutes from Bagmore. <span className="text-foreground font-semibold">No vibes from this planet.</span>
+          </p>
+
+          <div className="reveal mt-10 flex flex-wrap items-center gap-4">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-serif tracking-wider shadow-elegant hover:scale-[1.03] transition-transform glitch-hover">
+              CLAIM ₹2499 OFFER
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-2 border-foreground/80 text-foreground px-8 py-4 rounded-full font-serif tracking-wider hover:bg-foreground hover:text-background transition-all">
+              <MessageCircle className="h-4 w-4" />
+              WHATSAPP US
+            </a>
+          </div>
+
+          <div className="reveal mt-14 md:mt-20 flex flex-wrap gap-x-12 gap-y-6 items-end">
+            <TrustBlock top={<div className="flex items-center gap-1"><span className="font-serif text-4xl md:text-5xl text-glow-pink">4.9</span><Star className="h-5 w-5 fill-gold text-gold" /></div>} label="Google Rating" />
+            <TrustBlock top={<span className="font-serif text-4xl md:text-5xl text-glow-cyan">500+</span>} label="Active Members" />
+            <TrustBlock top={<div className="flex items-center gap-1.5"><Clock className="h-5 w-5 text-gold" /><span className="font-serif text-4xl md:text-5xl">6–10</span></div>} label="Open every day" />
+          </div>
         </div>
 
-        <h1 className="reveal font-serif font-normal leading-[0.9] tracking-tight text-[clamp(3rem,9vw,8.5rem)] max-w-6xl">
-          <span className="block text-foreground text-glow-pink">TRAIN LIKE</span>
-          <span className="block gum-gradient">YOU MEAN IT.</span>
-        </h1>
-
-        <p className="reveal mt-10 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
-          Kanchrapara's loudest, brightest, hardest-hitting gym. Heavy iron, neon nights,
-          a community that grinds — minutes from Bagmore. <span className="text-foreground font-semibold">No vibes from this planet.</span>
-        </p>
-
-        <div className="reveal mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-serif tracking-wider shadow-elegant hover:scale-[1.03] transition-transform glitch-hover"
-          >
-            CLAIM ₹2499 OFFER
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border-2 border-foreground/80 text-foreground px-8 py-4 rounded-full font-serif tracking-wider hover:bg-foreground hover:text-background transition-all"
-          >
-            <MessageCircle className="h-4 w-4" />
-            WHATSAPP US
-          </a>
-        </div>
-
-        {/* Trust row */}
-        <div className="reveal mt-16 md:mt-24 flex flex-wrap gap-x-12 gap-y-6 items-end">
-          <TrustBlock
-            top={
-              <div className="flex items-center gap-1">
-                <span className="font-serif text-4xl md:text-5xl text-glow-pink">4.9</span>
-                <Star className="h-5 w-5 fill-gold text-gold" />
+        <div className="lg:col-span-5 relative reveal">
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-gold/40 shadow-elegant">
+            <img src={gymHero} alt="Athlete deadlifting heavy barbell under neon pink and cyan lights at Iron Fitness Kanchrapara" width={1600} height={1200} className="absolute inset-0 h-full w-full object-cover scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            <div className="absolute inset-0 mix-blend-overlay opacity-60" style={{ background: "radial-gradient(circle at 30% 40%, oklch(0.72 0.28 350 / 0.55), transparent 60%)" }} />
+            <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between">
+              <div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-ink-soft">Today</div>
+                <div className="font-serif text-2xl text-foreground text-glow-pink">HEAVY DAY.</div>
               </div>
-            }
-            label="Google Rating"
-          />
-          <TrustBlock top={<span className="font-serif text-4xl md:text-5xl text-glow-cyan">500+</span>} label="Active Members" />
-          <TrustBlock
-            top={
-              <div className="flex items-center gap-1.5">
-                <Clock className="h-5 w-5 text-gold" />
-                <span className="font-serif text-4xl md:text-5xl">6–10</span>
+              <div className="flex items-center gap-1.5 bg-background/70 backdrop-blur px-3 py-1.5 rounded-full border border-gold/40">
+                <Zap className="h-3.5 w-3.5 text-gold" />
+                <span className="text-[10px] uppercase tracking-widest">Live · Open Now</span>
               </div>
-            }
-            label="Open every day"
-          />
+            </div>
+          </div>
+          <div className="hidden md:block absolute -bottom-10 -left-10 w-44 aspect-square rounded-2xl overflow-hidden border border-gold/40 shadow-elegant rotate-[-6deg]">
+            <img src={gymPlates} alt="Heavy iron plates" width={400} height={400} loading="lazy" className="h-full w-full object-cover" />
+          </div>
+          <div className="hidden md:block absolute -top-8 -right-6 w-36 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-[var(--accent)]/60 neon-cyan rotate-[5deg]">
+            <img src={gymPullup} alt="Athlete doing pull-ups" width={400} height={520} loading="lazy" className="h-full w-full object-cover" />
+          </div>
         </div>
       </div>
     </section>
@@ -736,39 +741,50 @@ function Countdown() {
 /* ---------------- GALLERY ---------------- */
 function Gallery() {
   const tiles = [
-    { label: "Gym Floor", h: "h-72 md:h-96", grad: "from-gold-soft to-muted" },
-    { label: "Cardio Zone", h: "h-72 md:h-72", grad: "from-muted to-gold-soft" },
-    { label: "Free Weights", h: "h-72 md:h-72", grad: "from-cream to-gold-soft" },
-    { label: "Personal Training Area", h: "h-72 md:h-96", grad: "from-gold-soft to-cream" },
-    { label: "Strength Machines", h: "h-72 md:h-72", grad: "from-muted to-cream" },
-    { label: "Reception & Lounge", h: "h-72 md:h-72", grad: "from-cream to-muted" },
+    { label: "Heavy Day", sub: "Deadlift Platform", img: gymHero, h: "md:row-span-2 aspect-[4/5] md:aspect-auto" },
+    { label: "Cardio Zone", sub: "Neon-lit Treadmills", img: gymCardio, h: "aspect-[4/3]" },
+    { label: "Free Weights", sub: "Chrome Dumbbell Wall", img: gymDumbbells, h: "aspect-[4/3]" },
+    { label: "Personal Training", sub: "1-on-1 Coaching", img: gymPT, h: "md:col-span-2 aspect-[16/9]" },
+    { label: "Boxing & MMA", sub: "Bag Work", img: gymBoxing, h: "aspect-[4/5]" },
+    { label: "Power Rack", sub: "Squat & Bench", img: gymSquat, h: "aspect-[4/5]" },
+    { label: "Pull-Up Bars", sub: "Calisthenics Zone", img: gymPullup, h: "aspect-[4/5]" },
   ];
   return (
-    <section className="py-24 md:py-32 px-5 md:px-8 bg-cream">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative py-24 md:py-32 px-5 md:px-8 bg-background overflow-hidden">
+      <div className="orb orb-pink float-slow h-[400px] w-[400px] -top-20 right-0 opacity-30" />
+      <div className="absolute inset-0 grid-lines opacity-30 pointer-events-none" />
+      <div className="max-w-7xl mx-auto relative">
         <div className="reveal max-w-2xl">
           <SectionLabel num="08" label="Inside the gym" />
           <h2 className="font-serif text-4xl md:text-6xl font-bold mt-6 leading-[1.05]">
-            A space designed
+            Heavy iron.
             <br />
-            <span className="gum-gradient not-italic">to make you train.</span>
+            <span className="gum-gradient not-italic">Neon nights.</span>
           </h2>
+          <p className="mt-6 text-ink-soft text-lg max-w-xl">
+            Step inside a gym engineered to make you train harder. Every corner glows, every plate is loaded, every rep matters.
+          </p>
         </div>
-        <div className="mt-14 grid md:grid-cols-3 gap-4 md:gap-5">
+        <div className="mt-14 grid md:grid-cols-3 gap-4 md:gap-5 md:auto-rows-[260px]">
           {tiles.map((t, i) => (
             <div
               key={t.label}
-              className={`reveal relative ${t.h} rounded-2xl overflow-hidden bg-gradient-to-br ${t.grad} border border-border group`}
-              style={{ transitionDelay: `${i * 50}ms` }}
+              className={`reveal relative ${t.h} rounded-2xl overflow-hidden border border-gold/30 group shadow-card`}
+              style={{ transitionDelay: `${i * 60}ms` }}
             >
-              <div className="absolute inset-0 grain opacity-50" />
-              <div className="absolute inset-0 flex items-end p-6">
-                <div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-ink-soft">Iron Fitness</div>
-                  <div className="font-serif text-2xl font-semibold text-ink mt-1">{t.label}</div>
-                </div>
+              <img
+                src={t.img}
+                alt={`${t.label} — ${t.sub} at Iron Fitness Kanchrapara`}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+              <div className="absolute inset-0 mix-blend-overlay opacity-0 group-hover:opacity-60 transition-opacity duration-500" style={{ background: "radial-gradient(circle at 50% 50%, oklch(0.78 0.27 345 / 0.5), transparent 70%)" }} />
+              <div className="absolute top-5 right-5 h-2 w-2 rounded-full bg-gold neon-pink animate-pulse" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="text-[10px] uppercase tracking-[0.3em] text-gold">{t.sub}</div>
+                <div className="font-serif text-2xl md:text-3xl text-foreground mt-1 text-glow-pink">{t.label}</div>
               </div>
-              <Dumbbell className="absolute top-6 right-6 h-7 w-7 text-ink/20 group-hover:text-gold-deep transition-colors" />
             </div>
           ))}
         </div>
@@ -948,8 +964,17 @@ function InfoRow({
 /* ---------------- FINAL CTA ---------------- */
 function FinalCTA() {
   return (
-    <section className="py-28 md:py-40 px-5 md:px-8 bg-background">
-      <div className="max-w-5xl mx-auto text-center reveal">
+    <section className="relative py-28 md:py-40 px-5 md:px-8 bg-background overflow-hidden">
+      <img
+        src={gymBoxing}
+        alt="Boxer hitting heavy bag at Iron Fitness"
+        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover opacity-30"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background" />
+      <div className="absolute inset-0 grid-lines opacity-40" />
+      <div className="orb orb-pink float-slow h-[500px] w-[500px] -top-32 -right-32 opacity-50" />
+      <div className="max-w-5xl mx-auto text-center reveal relative">
         <SectionLabel num="11" label="The first step" />
         <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mt-8 leading-[0.95]">
           Stop waiting
@@ -960,19 +985,11 @@ function FinalCTA() {
           3 months for ₹2499. Doors open 6 AM tomorrow. Send one WhatsApp message and your seat is held.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-semibold shadow-elegant text-lg"
-          >
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-semibold shadow-elegant text-lg glitch-hover">
             <MessageCircle className="h-5 w-5" />
             Message us now
           </a>
-          <a
-            href={`tel:+91${PHONE}`}
-            className="inline-flex items-center gap-2 border border-ink text-ink px-8 py-4 rounded-full font-semibold hover:bg-ink hover:text-background transition-colors text-lg"
-          >
+          <a href={`tel:+91${PHONE}`} className="inline-flex items-center gap-2 border border-foreground text-foreground px-8 py-4 rounded-full font-semibold hover:bg-foreground hover:text-background transition-colors text-lg">
             <Phone className="h-5 w-5" />
             +91 {PHONE}
           </a>
