@@ -150,80 +150,77 @@ function Navbar() {
 function Hero() {
   return (
     <section id="top" className="relative min-h-screen pt-28 md:pt-32 pb-20 bg-gradient-hero overflow-hidden">
-      {/* Floating neon orbs */}
       <div className="orb orb-pink float-slow h-[420px] w-[420px] -top-20 -left-20" />
       <div className="orb orb-cyan float-mid h-[360px] w-[360px] top-40 -right-24" />
       <div className="orb orb-violet float-slow h-[300px] w-[300px] bottom-10 left-1/3 opacity-40" />
       <div className="absolute inset-0 grid-lines opacity-40 pointer-events-none" />
       <div className="absolute inset-0 grain opacity-70 pointer-events-none" />
 
-      {/* Floating offer sticker */}
-      <div className="absolute top-24 md:top-28 right-5 md:right-10 z-10 reveal">
+      <div className="absolute top-24 md:top-28 right-5 md:right-10 z-20 reveal">
         <div className="sticker bg-gold text-background rounded-xl px-4 py-2.5 flex items-center gap-2">
           <Flame className="h-4 w-4" />
           <span className="font-serif text-sm tracking-wider">3 MOS · ₹2499</span>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-5 md:px-8 relative">
-        <div className="reveal flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-soft mb-8">
-          <span className="gold-divider" />
-          <span className="text-glow-pink">Kanchrapara · Bagmore · Est.</span>
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] neon-cyan" />
+      <div className="max-w-7xl mx-auto px-5 md:px-8 relative grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="lg:col-span-7">
+          <div className="reveal flex items-center gap-3 text-[11px] uppercase tracking-[0.3em] text-ink-soft mb-8">
+            <span className="gold-divider" />
+            <span className="text-glow-pink">Kanchrapara · Bagmore · Est.</span>
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] neon-cyan" />
+          </div>
+
+          <h1 className="reveal font-serif font-normal leading-[0.9] tracking-tight text-[clamp(3rem,8vw,7.5rem)]">
+            <span className="block text-foreground text-glow-pink">TRAIN LIKE</span>
+            <span className="block gum-gradient">YOU MEAN IT.</span>
+          </h1>
+
+          <p className="reveal mt-10 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
+            Kanchrapara's loudest, brightest, hardest-hitting gym. Heavy iron, neon nights,
+            a community that grinds — minutes from Bagmore. <span className="text-foreground font-semibold">No vibes from this planet.</span>
+          </p>
+
+          <div className="reveal mt-10 flex flex-wrap items-center gap-4">
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-serif tracking-wider shadow-elegant hover:scale-[1.03] transition-transform glitch-hover">
+              CLAIM ₹2499 OFFER
+              <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 border-2 border-foreground/80 text-foreground px-8 py-4 rounded-full font-serif tracking-wider hover:bg-foreground hover:text-background transition-all">
+              <MessageCircle className="h-4 w-4" />
+              WHATSAPP US
+            </a>
+          </div>
+
+          <div className="reveal mt-14 md:mt-20 flex flex-wrap gap-x-12 gap-y-6 items-end">
+            <TrustBlock top={<div className="flex items-center gap-1"><span className="font-serif text-4xl md:text-5xl text-glow-pink">4.9</span><Star className="h-5 w-5 fill-gold text-gold" /></div>} label="Google Rating" />
+            <TrustBlock top={<span className="font-serif text-4xl md:text-5xl text-glow-cyan">500+</span>} label="Active Members" />
+            <TrustBlock top={<div className="flex items-center gap-1.5"><Clock className="h-5 w-5 text-gold" /><span className="font-serif text-4xl md:text-5xl">6–10</span></div>} label="Open every day" />
+          </div>
         </div>
 
-        <h1 className="reveal font-serif font-normal leading-[0.9] tracking-tight text-[clamp(3rem,9vw,8.5rem)] max-w-6xl">
-          <span className="block text-foreground text-glow-pink">TRAIN LIKE</span>
-          <span className="block gum-gradient">YOU MEAN IT.</span>
-        </h1>
-
-        <p className="reveal mt-10 max-w-xl text-lg md:text-xl text-ink-soft leading-relaxed">
-          Kanchrapara's loudest, brightest, hardest-hitting gym. Heavy iron, neon nights,
-          a community that grinds — minutes from Bagmore. <span className="text-foreground font-semibold">No vibes from this planet.</span>
-        </p>
-
-        <div className="reveal mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 bg-gradient-gold text-background px-8 py-4 rounded-full font-serif tracking-wider shadow-elegant hover:scale-[1.03] transition-transform glitch-hover"
-          >
-            CLAIM ₹2499 OFFER
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-          <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 border-2 border-foreground/80 text-foreground px-8 py-4 rounded-full font-serif tracking-wider hover:bg-foreground hover:text-background transition-all"
-          >
-            <MessageCircle className="h-4 w-4" />
-            WHATSAPP US
-          </a>
-        </div>
-
-        {/* Trust row */}
-        <div className="reveal mt-16 md:mt-24 flex flex-wrap gap-x-12 gap-y-6 items-end">
-          <TrustBlock
-            top={
-              <div className="flex items-center gap-1">
-                <span className="font-serif text-4xl md:text-5xl text-glow-pink">4.9</span>
-                <Star className="h-5 w-5 fill-gold text-gold" />
+        <div className="lg:col-span-5 relative reveal">
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-gold/40 shadow-elegant">
+            <img src={gymHero} alt="Athlete deadlifting heavy barbell under neon pink and cyan lights at Iron Fitness Kanchrapara" width={1600} height={1200} className="absolute inset-0 h-full w-full object-cover scale-110" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
+            <div className="absolute inset-0 mix-blend-overlay opacity-60" style={{ background: "radial-gradient(circle at 30% 40%, oklch(0.72 0.28 350 / 0.55), transparent 60%)" }} />
+            <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between">
+              <div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-ink-soft">Today</div>
+                <div className="font-serif text-2xl text-foreground text-glow-pink">HEAVY DAY.</div>
               </div>
-            }
-            label="Google Rating"
-          />
-          <TrustBlock top={<span className="font-serif text-4xl md:text-5xl text-glow-cyan">500+</span>} label="Active Members" />
-          <TrustBlock
-            top={
-              <div className="flex items-center gap-1.5">
-                <Clock className="h-5 w-5 text-gold" />
-                <span className="font-serif text-4xl md:text-5xl">6–10</span>
+              <div className="flex items-center gap-1.5 bg-background/70 backdrop-blur px-3 py-1.5 rounded-full border border-gold/40">
+                <Zap className="h-3.5 w-3.5 text-gold" />
+                <span className="text-[10px] uppercase tracking-widest">Live · Open Now</span>
               </div>
-            }
-            label="Open every day"
-          />
+            </div>
+          </div>
+          <div className="hidden md:block absolute -bottom-10 -left-10 w-44 aspect-square rounded-2xl overflow-hidden border border-gold/40 shadow-elegant rotate-[-6deg]">
+            <img src={gymPlates} alt="Heavy iron plates" width={400} height={400} loading="lazy" className="h-full w-full object-cover" />
+          </div>
+          <div className="hidden md:block absolute -top-8 -right-6 w-36 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-[var(--accent)]/60 neon-cyan rotate-[5deg]">
+            <img src={gymPullup} alt="Athlete doing pull-ups" width={400} height={520} loading="lazy" className="h-full w-full object-cover" />
+          </div>
         </div>
       </div>
     </section>
