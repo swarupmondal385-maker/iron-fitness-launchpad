@@ -7,7 +7,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:dev": "vite build --mode development",
-    "build:vercel": "vite build && mkdir -p output && cp -r dist/client/* output/",
+    "build:vercel": "vite build && node -e \"const f=require('fs');const p=require('path');const src='dist/client';const dst='output';if(f.existsSync(src)){if(f.existsSync(dst))f.rmSync(dst,{recursive:true});f.cpSync(src,dst,{recursive:true});console.log('Copied '+src+' to '+dst);}else console.error(src+' not found');\"",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write ."
